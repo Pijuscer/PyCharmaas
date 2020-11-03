@@ -145,10 +145,9 @@ def drop_table():
     with DatabaseContextManager("db") as db:
         db.execute(query)
 
-"Foreign key table"
-Table = "Customer"
-Fields = [first_name, last_name, age, Foreign Key (compnay_id) References Companies(id)]
+        "Foreign key table"
+        Table = "Customer"
+        Fields = [first_name, last_name, age, Foreign Key(compnay_id) References Companies(id)]
 
-
-Table = "Companies"
-Fields = [company_name, employee_count]
+        Table = "Companies"
+        Fields = [company_name, employee_count]
